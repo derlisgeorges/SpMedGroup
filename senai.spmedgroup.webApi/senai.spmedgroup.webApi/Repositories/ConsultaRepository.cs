@@ -39,15 +39,15 @@ namespace senai.spmedgroup.webApi.Repositories
 
             if (ConsultaAtualizada.Descricao != null)
             {
-                ConsultaAntiga.Descricao = ConsultaAntiga.Descricao;
+                ConsultaAntiga.Descricao = ConsultaAtualizada.Descricao;
             }
 
-            if (ConsultaAtualizada.Descricao == null)
+            if (ConsultaAtualizada.IdMedico == null)
             {
-                ConsultaAntiga.Descricao = ConsultaAntiga.Descricao;
+                ConsultaAntiga.IdMedico = ConsultaAtualizada.IdMedico;
             }
-
-
+            ctx.Update(ConsultaAntiga);
+            ctx.SaveChanges();
         }
 
         public Consulta BuscarPorId(int id)

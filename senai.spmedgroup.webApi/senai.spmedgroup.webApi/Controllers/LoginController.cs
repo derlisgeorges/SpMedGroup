@@ -29,7 +29,7 @@ namespace senai.spmedgroup.webApi.Controllers
             _usuarioRepository = new UsuarioRepository();
         }
 
-
+       
         [HttpPost]
         public IActionResult Post(LoginViewModels login)
         {

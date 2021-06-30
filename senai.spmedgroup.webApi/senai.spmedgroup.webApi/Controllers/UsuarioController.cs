@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai.spmedgroup.webApi.Domains;
 using senai.spmedgroup.webApi.Interfaces;
@@ -13,6 +14,8 @@ namespace senai.spmedgroup.webApi.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
+
+    [Authorize(Roles = "1")]
     public class UsuarioController : ControllerBase
     {
         private IUsuarioRepository _UsuarioRepository { get; set; }

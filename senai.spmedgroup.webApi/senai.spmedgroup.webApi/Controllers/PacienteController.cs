@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai.spmedgroup.webApi.Domains;
 using senai.spmedgroup.webApi.Interfaces;
@@ -48,6 +49,8 @@ namespace senai.spmedgroup.webApi.Controllers
             }
         }
 
+
+        [Authorize(Roles = "2")]
         [HttpPost]
         public IActionResult Post(Paciente novoPaciente)
         {
@@ -63,7 +66,7 @@ namespace senai.spmedgroup.webApi.Controllers
             }
 
         }
-
+    
         [HttpPut("{id}")]
         public IActionResult Put(int id, Paciente PaceinteAtualizado)
         {
