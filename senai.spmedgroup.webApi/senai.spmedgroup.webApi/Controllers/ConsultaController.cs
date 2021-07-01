@@ -6,6 +6,7 @@ using senai.spmedgroup.webApi.Interfaces;
 using senai.spmedgroup.webApi.Repositories;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -58,6 +59,25 @@ namespace senai.spmedgroup.webApi.Controllers
         {
             _consultaRepository.Deletar(id);
             return StatusCode(200);
+        }
+
+        [HttpGet("minhas")]
+        public IActionResult GetMinha()
+        {
+            try
+            {
+              int  idUsuario = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+                return Ok(_consultaRepository.ListarMinhas(idUsuario));
+            }
+            catch (Exception error)
+            {
+                // Retorna a resposta da requisição 400 - Bad Request e o erro ocorrido
+                return BadRequest(new
+                {
+                    mensagem = "Não é possível mostrar as consultas se o usuário não estiver logado!",
+                    error
+                });
+            }
         }
     }
 }

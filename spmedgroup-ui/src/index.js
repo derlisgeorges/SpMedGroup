@@ -5,11 +5,12 @@ import { Route, BrowserRouter as Router, Switch, Redirect} from 'react-router-do
 import './index.css';
 
 import App from './pages/home/App';
-import Consulta from './pages/Consultas/consulta';
+import Consultas from './pages/Consultas/Consultas';
+
 import NotFound from './pages/notFound/notFound';
 
 import reportWebVitals from './reportWebVitals';
-import NotFound from './pages/notFound/notFound';
+
 
 
 
@@ -18,7 +19,7 @@ const routing = (
     <div>
       <Switch>
         <Route exact path="/" component={App}/> {/* Home*/}
-        <Route path="/consulta" component={Consulta}/> {/* Consultas */}
+        <Route path="/consultas" component={Consultas}/> {/* Consultas */}
         <Route path="/notfound" component={NotFound}/> {/* Not Found */}
         <Redirect to="/notfound" component={NotFound}/> {/* Redireciona para NotFound caso não encontre nenhuma rota */}
       </Switch>
