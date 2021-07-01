@@ -5,7 +5,7 @@ import { Route, BrowserRouter as Router, Switch, Redirect} from 'react-router-do
 import './index.css';
 
 import App from './pages/home/App';
-import Consultas from './pages/consultas/Consultas';
+// import Consultas from './pages/consultas/Consultas';
 import novaConsulta from './pages/novaConsulta/novaConsulta';
 import novaDescricao from './pages/novaDescricao/novaDescricao';
 import Login from './pages/login/login';
@@ -24,7 +24,7 @@ const routing = (
     <div>
       <Switch>
         <Route exact path="/" component={App}/>                 {/* Home*/}
-        <Route path="/consultas" component={Consultas}/>        {/* Consultas */}
+        {/* <Route path="/consultas" component={Consultas}/>        Consultas */}
         <Route path="/login" component={Login}/>                {/* Login*/}
         <Route path="/notfound" component={NotFound}/>          {/* Not Found */}
         <Route path="novaconsulta" component={novaConsulta}/>   {/* Nova Consulta */}

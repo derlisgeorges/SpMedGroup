@@ -7,7 +7,7 @@ class Login extends Component {
         this.state = {
             email : '',
             senha: '',
-            errorMensagem : '',
+            erroMensagem : '',
             isLoading : false
         }
     };
@@ -36,13 +36,15 @@ class Login extends Component {
 
             // exige o valor do token no console do navegador 
             console.log('Meu token é:' + resposta.data.token)
+            // e define
+            this.setState({ isLoading : false})
         }
       })
 
       // Caso haja um erro,
       .catch(() => {
         // define o valor do state errorMensagem com uma mensegem personalizada e que a requisição terminou 
-        this.setState({ errorMensagem : 'E-mail ou senha inválidos! Tente novamente.' })
+        this.setState({ errorMensagem : 'E-mail ou senha inválidos! Tente novamente.', isLoading : false })
       })
     }
 
@@ -104,11 +106,6 @@ class Login extends Component {
                     </button>
 
                  }
-
-
-                <button type="submit">
-                    Login
-                </button>
               </form>
             </section>
           </main>
