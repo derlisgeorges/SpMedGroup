@@ -1,36 +1,45 @@
-import { Component } from "react"
+import { Component } from "react";
 
-class Consultas extends Component{
+class Consulta extends Component{
     constructor (props){
         super(props);
-        this.state = {
-
+        this.state ={
+            listaConsultas : [],
+            
         }
     }
-
 
     componentDidMount(){
         // codigo
     }
 
-    render(){
-        return
-        <div>
-            <main>
-                <section>
-                    {/* Lista de tipos de consulta */}
-                    <h2>List de consulta</h2>
-                    <table>
-                        <tr>
-                            <th>
+ render(){
+     <div>
+         <main>
+             <section>
+                 {/* Lista de consultas */}
+                 <h2>Lista de Consultas</h2>
+                 <table>
+                     <thead>
+                         <tr></tr>
+                     </thead>
 
-                            </th>
-                        </tr>
-                    </table>
-                </section>
-            </main>
-        </div>
-    }
+                     <tbody>
+                        {
+                            this.state.listaConsultas.map( (consulta) => {
+                                return (
+                                    <tr></tr>
+                                )
+                            })
+                        }
+                     </tbody>
+
+
+                 </table>
+             </section>
+         </main>
+     </div>
+ }
 }
 
-export default Consultas;
+export default Consulta;
