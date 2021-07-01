@@ -5,7 +5,11 @@ import { Route, BrowserRouter as Router, Switch, Redirect} from 'react-router-do
 import './index.css';
 
 import App from './pages/home/App';
-import Consultas from './pages/Consultas/Consultas';
+import Consultas from './pages/consultas/Consultas';
+import novaConsulta from './pages/novaConsulta/novaConsulta';
+import novaDescricao from './pages/novaDescricao/novaDescricao';
+import Login from './pages/login/login';
+
 
 import NotFound from './pages/notFound/notFound';
 
@@ -14,14 +18,18 @@ import reportWebVitals from './reportWebVitals';
 
 
 
+
 const routing = (
   <Router>
     <div>
       <Switch>
-        <Route exact path="/" component={App}/> {/* Home*/}
-        <Route path="/consultas" component={Consultas}/> {/* Consultas */}
-        <Route path="/notfound" component={NotFound}/> {/* Not Found */}
-        <Redirect to="/notfound" component={NotFound}/> {/* Redireciona para NotFound caso não encontre nenhuma rota */}
+        <Route exact path="/" component={App}/>                 {/* Home*/}
+        <Route path="/consultas" component={Consultas}/>        {/* Consultas */}
+        <Route path="/login" component={Login}/>                {/* Login*/}
+        <Route path="/notfound" component={NotFound}/>          {/* Not Found */}
+        <Route path="novaconsulta" component={novaConsulta}/>   {/* Nova Consulta */}
+        <Route path="novadescricao" component={novaDescricao}/> {/* Nova Descriao */}
+        <Redirect to="/notfound" component={NotFound}/>         {/* Redireciona para NotFound caso não encontre nenhuma rota */}
       </Switch>
     </div>
   </Router>

@@ -1,1 +1,7 @@
 configuraçoes basica de html
+
+
+pacotes para o spmdgroup:
+
+ npm install react-router-dom
+npm install axios 
