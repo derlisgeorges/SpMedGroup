@@ -23,25 +23,32 @@ export default class App extends Component{
 
 
   componentDidMount(){
-    //realiza a chamada da api
+    //realiza a chamada da Api trazendo todos os eventos
     this.buscarConsulta();
   }
 
   render () {
     return (
-      <View style={styles.container}>
-        <text>{'Consulta'.toUpperCase()}</text>
-        <View>
-          <FlatList
-          contentContainerStyle={styles.mainBodyConteudo}
-          data={this.state.listaConsulta}
-          keyExtractor={ (item) => item.nomeConsulta}
-          renderItem={this.renderizaItem}
-          />
-        </View>
+      <View style={styles.main}>
+
+        {/* Cabeçalho - Header */}
+        <View style={styles.mainHeader}>
+          <View style={styles.mainHeaderRow}>
+            <Text style={styles.mainHeaderText}>Consultas</Text>
+          </View>
+        <View style={styles.mainHeaderLine}/>
+        </View >
+      {/* Corpo - Body - Section */}
+      <View style={styles.mainBody}>
+        <FlatList contentContainerStyle={styles.mainBodyContent} data={this.state.listaConsulta} keyExtractor= {item=> item.}/>
+        
+      </View>
+
       </View>
     );
   }
+
+  
 
   renderizaItem = ({ item }) => (
     <View style={styles.flatItemLinha}>
@@ -57,18 +64,37 @@ export default class App extends Component{
 }
 
 const styles = StyleSheet.create({
-  container: {
+    main: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#9E80E8',
   },
 
-  // conteúdo da lista 
-  mainBodyConteudo: {
-    paddingTop:30,
-    paddingRight: 50,
-    paddingLeft:50,
+  //cabeçalho
+  mainHeader:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center'
+
   },
+  
+  mainHeaderRow:{
+    flexDirection: 'row'
+  },
+
+  mainHeaderText:{
+    fontSize:16,
+    letterSpacing:2,
+    color:'white',
+    fontFamily: 'Open Sans'
+  },
+
+
+    mainHeaderLine:{
+      width: 220,
+      paddingTop:10,
+      borderBottomColor:'white',
+      borderBottomWidth:1
+    }
+
 
 });
