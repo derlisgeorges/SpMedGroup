@@ -49,7 +49,6 @@ C:\Users\dev\Desktop\SpMedGroup\senai.spmedgroup.webApi\senai.spmedgroup.webApi\
 C:\Users\dev\Desktop\SpMedGroup\senai.spmedgroup.webApi\senai.spmedgroup.webApi\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\dev\Desktop\SpMedGroup\senai.spmedgroup.webApi\senai.spmedgroup.webApi\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\dev\Desktop\SpMedGroup\senai.spmedgroup.webApi\senai.spmedgroup.webApi\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\dev\Desktop\SpMedGroup\senai.spmedgroup.webApi\senai.spmedgroup.webApi\obj\Debug\net5.0\senai.spmedgroup.webApi.csprojAssemblyReference.cache
 C:\Users\dev\Desktop\SpMedGroup\senai.spmedgroup.webApi\senai.spmedgroup.webApi\obj\Debug\net5.0\senai.spmedgroup.webApi.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\dev\Desktop\SpMedGroup\senai.spmedgroup.webApi\senai.spmedgroup.webApi\obj\Debug\net5.0\senai.spmedgroup.webApi.AssemblyInfoInputs.cache
 C:\Users\dev\Desktop\SpMedGroup\senai.spmedgroup.webApi\senai.spmedgroup.webApi\obj\Debug\net5.0\senai.spmedgroup.webApi.AssemblyInfo.cs
@@ -136,3 +135,4 @@ C:\Users\FIC\Desktop\spmedgroup\senai.spmedgroup.webApi\senai.spmedgroup.webApi\
 C:\Users\FIC\Desktop\spmedgroup\senai.spmedgroup.webApi\senai.spmedgroup.webApi\obj\Debug\net5.0\senai.spmedgroup.webApi.xml
 C:\Users\FIC\Desktop\spmedgroup\senai.spmedgroup.webApi\senai.spmedgroup.webApi\obj\Debug\net5.0\senai.spmedgroup.webApi.pdb
 C:\Users\FIC\Desktop\spmedgroup\senai.spmedgroup.webApi\senai.spmedgroup.webApi\obj\Debug\net5.0\senai.spmedgroup.webApi.genruntimeconfig.cache
+C:\Users\DEV\Desktop\spmedgroup\senai.spmedgroup.webApi\senai.spmedgroup.webApi\obj\Debug\net5.0\senai.spmedgroup.webApi.csproj.AssemblyReference.cache
